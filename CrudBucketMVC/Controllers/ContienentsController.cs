@@ -2,6 +2,7 @@
 using CrudBucketMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata.Ecma335;
 
 namespace CrudBucketMVC.Controllers
 {
@@ -56,6 +57,17 @@ namespace CrudBucketMVC.Controllers
         {
             contienent.Id = id;
             _context.Contienents.Update(contienent);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        [Route("/contienents/{id:int}/delete")]
+        public IActionResult Delete(int id)
+        {
+            var contienent = _context.Contienents.Find(id);
+            _context.Contienents.Remove(contienent);
             _context.SaveChanges();
 
             return RedirectToAction("Index");

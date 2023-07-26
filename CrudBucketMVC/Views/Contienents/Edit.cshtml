@@ -7,6 +7,10 @@
         <input type="text" id="Name" name="Name" value="@Model.Name" />
     </div>
     <div>
-        <button type="submit">Edit Contienent</button>
+        <button type="submit">Update Contienent</button>
     </div>
+</form>
+<br />
+<form method="post" action="/contienents/@Model.Id/delete">
+    <button type="submit">DELETE @Model.Name.ToUpper()</button>
 </form>
