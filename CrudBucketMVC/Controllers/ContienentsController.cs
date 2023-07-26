@@ -51,7 +51,7 @@ namespace CrudBucketMVC.Controllers
         }
 
         [HttpPost]
-        [Route("/contienents")]
+        [Route("/contienents/{id:int}")]
         public IActionResult Update(Contienent contienent, int id)
         {
             contienent.Id = id;
