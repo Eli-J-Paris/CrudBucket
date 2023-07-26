@@ -1,0 +1,12 @@
+﻿@model Contienent
+<h1>Edit a Contient</h1>
+
+<form method="post" action="/contienents/@Model.Id">
+    <div>
+        <label for="Name">Name of Contient</label>
+        <input type="text" id="Name" name="Name" value="@Model.Name" />
+    </div>
+    <div>
+        <button type="submit">Edit Contienent</button>
+    </div>
+</form>
