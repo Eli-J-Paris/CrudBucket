@@ -1,16 +1,17 @@
 ﻿@model IEnumerable<Contienent>
 
 <h1> Here are the 7 Contients of the world</h1>
-
+<br />
 
 @foreach(var contienent in Model)
 {
     <div>
-        <h2>@contienent.Name</h2>
-        <h4><a href="/contienents/@contienent.Id">Countries in @contienent.Name</a></h4>
-        <h6><a href="/contienents/@contienent.Id/edit">Edit @contienent.Name</a></h6>
+        <h1>@contienent.Name</h1>
+        <p><a href="/contienents/@contienent.Id/countries">Countries in @contienent.Name</a></p>
+        <p><a href="/contienents/@contienent.Id/edit">Edit @contienent.Name</a></p>
+        <p>----------------------------------------------</p>
     </div>
-    
+   
 }
-<br />
+
 <a href="/contienents/new">Add new</a>

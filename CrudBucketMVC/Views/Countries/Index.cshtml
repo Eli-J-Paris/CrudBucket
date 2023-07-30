@@ -1,0 +1,13 @@
+﻿<!-- Countries-->
+@model Contienent
+
+<h1>Countries in @Model.Name</h1>
+
+@foreach(var country in Model.Countries)
+{
+    <a href="/contienents/@Model.Id/countries/@country.Id/edit">@country.Name</a>
+    <br />
+}
+<br />
+
+<a href="/contienents/@Model.Id/countries/new">Add Country</a>

@@ -1,0 +1,16 @@
+﻿@model Contienent
+
+<h1>Add A Country to @Model.Name</h1>
+
+<form method="post" action ="/contienents/@Model.Id/countries">
+    <div>
+        <label for="Name">Name: </label>
+        <input type="text" id="Name" name="Name" />
+    </div>
+    <div>
+        <label for="Population">Population: </label>
+        <input type="number" id="Population" name="Population" min="0" />
+    </div>
+    <br />
+    <button type="submit">Submit</button>
+</form>
